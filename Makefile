@@ -1,4 +1,4 @@
-xml2rfc ?= xml2rfc
+xml2rfc ?= xml2rfc -v
 kramdown-rfc2629 ?= kramdown-rfc2629
 idnits ?= idnits
 
@@ -37,3 +37,7 @@ $(next).xml: $(draft).xml
 
 %.html: %.xml
 	$(xml2rfc) --html $< $@
+
+
+upload: $(draft).html $(draft).txt
+	python upload-draft.py $(draft).html
