@@ -1417,11 +1417,8 @@ candidate:1 1 UDP 1694498815 192.0.2.33 10000 typ host
             <t>A rollback is performed by supplying a session
             description of type "rollback" with empty contents to
             either setLocalDescription or setRemoteDescription.
-            The effects MUST be the same regardless of whether
-            setLocalDescription or setRemoteDescription is called. Note
-            that the only reason rollbacks use setLocalDescription
-            and setRemoteDescription rather than an independent method
-            is for compatibility with existing implementations.</t>
+            The effect MUST be the same regardless of whether
+            setLocalDescription or setRemoteDescription is called.</t>
 
             <t>A rollback may be performed if the PeerConnection is in
             any state except for "stable". This means that both offers
@@ -5483,7 +5480,7 @@ a=msid:bbce3ba6-abfc-ac63-d00a-e15b286f8fce
       publication.</t>
 
 
-      
+
        <t>Changes in draft-21:</t>
 
       <t>
